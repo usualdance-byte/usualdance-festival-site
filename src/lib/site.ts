@@ -35,6 +35,9 @@ export const EXTERNAL = {
   fotop: "https://fotop.com/fotos/eventos?evento=296701",
   edition2026PlaylistId: "PLHGBatdxB7xI",
   edition2026PlaylistUrl: "https://www.youtube.com/playlist?list=PLHGBatdxB7xI",
+  // Capa oficial da playlist no YouTube (via oEmbed) — atualizar aqui se o
+  // Ticko trocar a capa/primeiro vídeo da playlist lá no YouTube.
+  edition2026PlaylistThumbnailId: "5yDznj_6fhE",
   teaserVideoId: "R72z2cvYEXU",
 };
 

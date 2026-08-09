@@ -37,7 +37,7 @@ export default function HomePage() {
           </>
         }
         description={SITE_SLOGAN}
-        image="/images/festival-foto-09.webp"
+        image="/images/festival-hero-mostra-competitiva.webp"
         imageAlt="Apresentação na Usualdance Festival 2026"
       >
         <a

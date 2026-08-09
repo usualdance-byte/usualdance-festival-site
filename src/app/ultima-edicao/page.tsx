@@ -75,7 +75,7 @@ export default function UltimaEdicaoPage() {
           <YouTubeEmbed
             videoId={`videoseries?list=${EXTERNAL.edition2026PlaylistId}`}
             title={`Apresentações — Usualdance Festival ${LAST_EDITION.year}`}
-            thumbnailVideoId={EXTERNAL.teaserVideoId}
+            thumbnailVideoId={EXTERNAL.edition2026PlaylistThumbnailId}
           />
         </div>
         <a
