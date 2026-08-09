@@ -4,7 +4,7 @@ export const SITE_SLOGAN = "Dança, mostra e competição em Votuporanga";
 
 export const PHONE_DISPLAY = "+55 17 99789-8187";
 export const PHONE_E164 = "5517997898187";
-export const EMAIL = "contato@usualdance.com";
+export const EMAIL = "festival@usualdance.com";
 
 export const VENUE = {
   name: 'Concha Acústica "Prof. Geraldo Alves Machado"',
@@ -22,8 +22,8 @@ export const GOOGLE_MAPS_URL =
   );
 
 export const SOCIAL = {
-  instagram: "https://www.instagram.com/usualdance",
-  tiktok: "https://tiktok.com/@usualdance",
+  instagram: "https://www.instagram.com/usualdance.festival",
+  tiktok: "https://tiktok.com/@usualdance.festival",
   youtube: "https://youtube.com/@usualdance",
 };
 

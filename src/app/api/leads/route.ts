@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { insertFestivalLead } from "@/lib/db";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const LEAD_SOURCE = "festival-landing";
 
 async function syncToSheet(lead: { name: string; email: string; whatsapp: string }) {
   const webhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
@@ -11,7 +12,11 @@ async function syncToSheet(lead: { name: string; email: string; whatsapp: string
     await fetch(webhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...lead, created_at: new Date().toISOString() }),
+      body: JSON.stringify({
+        ...lead,
+        source: LEAD_SOURCE,
+        created_at: new Date().toISOString(),
+      }),
     });
   } catch (err) {
     // Best-effort: se o Sheets falhar, o lead já está salvo no banco.
