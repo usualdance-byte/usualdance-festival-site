@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { EMAIL, SITE_SLOGAN, SOCIAL, WHATSAPP_GERAL } from "@/lib/site";
 import { InstagramIcon, TikTokIcon, YouTubeIcon } from "./SocialIcons";
@@ -14,7 +15,13 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-display text-xl text-white">USUALDANCE FESTIVAL</p>
+            <Image
+              src="/images/logo-branca.webp"
+              alt="Usualdance Festival"
+              width={800}
+              height={267}
+              className="h-8 w-auto"
+            />
             <p className="mt-3 text-sm text-muted">{SITE_SLOGAN}</p>
             <ul className="mt-4 flex gap-4">
               {SOCIAL_LINKS.map((s) => (
@@ -64,6 +71,11 @@ export default function Footer() {
               <li>
                 <Link href="/ultima-edicao" className="transition hover:text-accent">
                   Última edição
+                </Link>
+              </li>
+              <li>
+                <Link href="/edicoes-anteriores" className="transition hover:text-accent">
+                  Edições anteriores
                 </Link>
               </li>
               <li>

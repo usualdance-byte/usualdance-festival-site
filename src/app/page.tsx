@@ -5,7 +5,7 @@ import Faq from "@/components/Faq";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { pageMetadata } from "@/lib/seo";
 import { ABOUT_TEXT, FAQ_ITEMS } from "@/lib/festival-data";
-import { GOOGLE_MAPS_URL, VENUE, WHATSAPP_GERAL } from "@/lib/site";
+import { GOOGLE_MAPS_EMBED_URL, GOOGLE_MAPS_URL, VENUE, WHATSAPP_GERAL } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Usualdance Festival — Próxima edição em breve",
@@ -67,13 +67,22 @@ export default function HomePage() {
           <p className="mt-1 text-sm text-muted sm:text-base">
             {VENUE.street} - {VENUE.neighborhood}, {VENUE.city} - {VENUE.state}, {VENUE.zip}
           </p>
+          <div className="mt-8 overflow-hidden rounded-2xl border border-white/10">
+            <iframe
+              src={GOOGLE_MAPS_EMBED_URL}
+              title={`Mapa: ${VENUE.name}`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-80 w-full sm:h-96"
+            />
+          </div>
           <a
             href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-semibold text-accent transition hover:text-white"
           >
-            Ver no Google Maps →
+            Abrir no Google Maps →
           </a>
         </div>
       </section>

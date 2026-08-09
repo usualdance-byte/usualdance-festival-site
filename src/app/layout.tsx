@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 import JsonLd from "@/components/JsonLd";
-import { eventSeriesSchema } from "@/lib/schema";
+import { eventSeriesSchema, localBusinessSchema } from "@/lib/schema";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 // TODO: confirmar se o festival vai usar o mesmo GA4 do usualdance.com ou
@@ -43,6 +43,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <JsonLd data={eventSeriesSchema} />
+        <JsonLd data={localBusinessSchema} />
         <SiteShell>{children}</SiteShell>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

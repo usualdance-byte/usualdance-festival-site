@@ -103,6 +103,8 @@ export const FAQ_ITEMS = [
     question: "Quando será a próxima edição do Usualdance Festival?",
     answer:
       "Ainda estamos definindo a data da próxima edição. Cadastre seu nome, e-mail e WhatsApp aqui no site para ser avisado em primeira mão assim que abrirmos as inscrições.",
+    linkText: "aqui no site",
+    linkHref: "#captacao",
   },
   {
     question: "Onde acontece o festival?",

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -7,6 +8,7 @@ const NAV_LINKS = [
   { label: "Sobre", href: "/#sobre" },
   { label: "Local", href: "/#local" },
   { label: "Última edição", href: "/ultima-edicao" },
+  { label: "Edições anteriores", href: "/edicoes-anteriores" },
   { label: "Cadastre-se", href: "/#captacao" },
 ];
 
@@ -16,8 +18,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-3 z-50 mx-3 sm:top-4 sm:mx-6 lg:mx-8">
       <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-black/45 px-4 py-3 backdrop-blur-xl sm:px-6">
-        <Link href="/" className="shrink-0 font-display text-lg text-white sm:text-xl">
-          USUALDANCE FESTIVAL
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/images/logo-branca.webp"
+            alt="Usualdance Festival"
+            width={800}
+            height={267}
+            priority
+            className="h-8 w-auto sm:h-9"
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">

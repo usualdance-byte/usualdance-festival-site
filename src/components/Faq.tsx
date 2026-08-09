@@ -7,6 +7,24 @@ import { faqSchema } from "@/lib/schema";
 export interface FaqItem {
   question: string;
   answer: string;
+  linkText?: string;
+  linkHref?: string;
+}
+
+function AnswerText({ item }: { item: FaqItem }) {
+  if (!item.linkText || !item.answer.includes(item.linkText)) {
+    return <>{item.answer}</>;
+  }
+  const [before, after] = item.answer.split(item.linkText);
+  return (
+    <>
+      {before}
+      <a href={item.linkHref} className="font-semibold text-accent underline hover:text-white">
+        {item.linkText}
+      </a>
+      {after}
+    </>
+  );
 }
 
 export default function Faq({ items }: { items: FaqItem[] }) {
@@ -39,7 +57,7 @@ export default function Faq({ items }: { items: FaqItem[] }) {
             </button>
             {isOpen && (
               <p className="pb-5 text-sm leading-relaxed text-muted sm:text-base">
-                {item.answer}
+                <AnswerText item={item} />
               </p>
             )}
           </div>
