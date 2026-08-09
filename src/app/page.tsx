@@ -7,7 +7,7 @@ import PageHero from "@/components/PageHero";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { pageMetadata } from "@/lib/seo";
-import { ABOUT_TEXT, FAQ_ITEMS, LAST_EDITION } from "@/lib/festival-data";
+import { ABOUT_TEXT, FAQ_ITEMS, FOUNDER, LAST_EDITION } from "@/lib/festival-data";
 import {
   EXTERNAL,
   GOOGLE_MAPS_EMBED_URL,
@@ -97,6 +97,30 @@ export default function HomePage() {
               className="object-cover object-top"
             />
           </div>
+        </div>
+      </section>
+
+      {/* IDEALIZADOR */}
+      <section className="border-t border-white/10 bg-surface">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:px-8">
+          <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-lime sm:h-32 sm:w-32">
+            <Image
+              src={`/images/${FOUNDER.photo}.webp`}
+              alt={FOUNDER.name}
+              fill
+              sizes="128px"
+              className="object-cover object-top"
+            />
+          </div>
+          <div>
+            <p className="font-display text-xl text-white sm:text-2xl">{FOUNDER.name}</p>
+            <p className="mt-1 text-xs font-bold uppercase tracking-widest text-lime">
+              {FOUNDER.role}
+            </p>
+          </div>
+          <p className="max-w-xl text-sm leading-relaxed text-muted sm:text-base">
+            {FOUNDER.bio}
+          </p>
         </div>
       </section>
 

@@ -6,6 +6,16 @@ export const LAST_EDITION = {
   year: "2026",
 };
 
+export const FOUNDER = {
+  name: "Ticko Bboy",
+  role: "Idealizador do Usualdance Festival",
+  photo: "ticko-bboy",
+  bio:
+    "Bailarino e produtor cultural, Ticko criou o Usualdance Festival para dar às escolas e " +
+    "estúdios de dança de Votuporanga e região um palco à altura do trabalho que fazem o ano " +
+    "inteiro.",
+};
+
 export const ABOUT_TEXT =
   'O Usualdance Festival é um festival de dança de Votuporanga/SP que combina ' +
   "mostras avaliadas pedagogicamente com competições por ranking de notas. " +
@@ -92,10 +102,10 @@ export const AWARD_HIGHLIGHTS = [
 ];
 
 export const EDITION_STATS = [
+  { value: "133", label: "Bailarinos" },
+  { value: "+140 mil", label: "Pessoas alcançadas" },
+  { value: "R$ 2.100", label: "Em prêmios" },
   { value: "5", label: "Modalidades" },
-  { value: "3", label: "Categorias de idade" },
-  { value: "4", label: "Jurados" },
-  { value: "7", label: "Prêmios especiais" },
 ];
 
 export const FAQ_ITEMS = [
