@@ -10,7 +10,7 @@ import { EXTERNAL } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Galeria",
   description:
-    "Fotos e vídeos de todas as edições já realizadas do Usualdance Festival, em Votuporanga/SP.",
+    "Veja fotos e vídeos de todas as edições já realizadas do Usualdance Festival, o festival de dança de Votuporanga/SP, e compre suas fotos.",
   path: "/galeria",
   ogImage: "/images/og-galeria.jpg",
 });

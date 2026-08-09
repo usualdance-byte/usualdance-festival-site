@@ -21,7 +21,7 @@ import { EXTERNAL } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Confira a última edição",
   description:
-    "Retrospectiva da edição 2026 do Usualdance Festival: modalidades, jurados e premiação.",
+    "Retrospectiva completa da edição 2026 do Usualdance Festival em Votuporanga/SP: números, fotos, vídeos, jurados e premiação da noite.",
   path: "/ultima-edicao",
   ogImage: "/images/og-ultima-edicao.jpg",
 });
