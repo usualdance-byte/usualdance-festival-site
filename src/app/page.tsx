@@ -5,9 +5,16 @@ import LeadForm from "@/components/LeadForm";
 import Faq from "@/components/Faq";
 import PageHero from "@/components/PageHero";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { pageMetadata } from "@/lib/seo";
-import { ABOUT_TEXT, FAQ_ITEMS } from "@/lib/festival-data";
-import { GOOGLE_MAPS_EMBED_URL, GOOGLE_MAPS_URL, VENUE, WHATSAPP_GERAL } from "@/lib/site";
+import { ABOUT_TEXT, FAQ_ITEMS, LAST_EDITION } from "@/lib/festival-data";
+import {
+  EXTERNAL,
+  GOOGLE_MAPS_EMBED_URL,
+  GOOGLE_MAPS_URL,
+  VENUE,
+  WHATSAPP_GERAL,
+} from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
   title: "Usualdance Festival — Próxima edição em breve",
@@ -46,6 +53,28 @@ export default function HomePage() {
           Ver última edição
         </Link>
       </PageHero>
+
+      {/* TEASER */}
+      <section className="border-t border-white/10 bg-surface">
+        <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:px-8">
+          <div className="order-2 text-center sm:order-1 sm:text-left">
+            <h2 className="font-display text-3xl text-white sm:text-4xl">
+              Assista o teaser
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+              Um gostinho do que rolou na edição {LAST_EDITION.year} — pra você já ir se
+              imaginando na próxima.
+            </p>
+          </div>
+          <div className="order-1 mx-auto w-full max-w-sm sm:order-2">
+            <YouTubeEmbed
+              videoId={EXTERNAL.teaserVideoId}
+              title="Teaser — Usualdance Festival 2026"
+              aspectClassName="aspect-[9/16]"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* CAPTAÇÃO */}
       <section id="captacao" className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">

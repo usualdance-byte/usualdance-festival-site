@@ -35,6 +35,7 @@ export const EXTERNAL = {
   fotop: "https://fotop.com/fotos/eventos?evento=296701",
   edition2026PlaylistId: "PLHGBatdxB7xI",
   edition2026PlaylistUrl: "https://www.youtube.com/playlist?list=PLHGBatdxB7xI",
+  teaserVideoId: "R72z2cvYEXU",
 };
 
 export function whatsappUrl(message: string) {
