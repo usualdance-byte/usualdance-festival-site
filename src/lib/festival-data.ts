@@ -11,9 +11,11 @@ export const FOUNDER = {
   role: "Idealizador do Usualdance Festival",
   photo: "ticko-bboy",
   bio:
-    "Bailarino e produtor cultural, Ticko criou o Usualdance Festival para dar às escolas e " +
-    "estúdios de dança de Votuporanga e região um palco à altura do trabalho que fazem o ano " +
-    "inteiro.",
+    "Há mais de 25 anos na cultura hip hop, Ticko Bboy é artista, empreendedor e mentor de " +
+    "empresas e artistas — levou a dança brasileira a palcos no Brasil, Portugal, Equador, " +
+    "França e Argentina. Fundador da Usualdance, criou o Usualdance Festival para dar às " +
+    "escolas e estúdios de dança de Votuporanga e região um palco à altura do trabalho que " +
+    "fazem o ano inteiro.",
 };
 
 export const ABOUT_TEXT =
