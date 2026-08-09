@@ -6,6 +6,8 @@ export interface GalleryPhoto {
   alt: string;
   width: number;
   height: number;
+  /** Vertical focus point (0-100, % from top) used when cropped in a pair tile. */
+  focusY?: number;
 }
 
 export type GalleryColumn =
@@ -35,7 +37,8 @@ function PairTile({ photos }: { photos: [GalleryPhoto, GalleryPhoto] }) {
             alt={photo.alt}
             fill
             sizes="224px"
-            className="object-cover object-top"
+            className="object-cover"
+            style={{ objectPosition: `50% ${photo.focusY ?? 20}%` }}
           />
         </div>
       ))}

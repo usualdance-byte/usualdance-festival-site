@@ -5,6 +5,23 @@ const dims: Record<number, [number, number]> = {
   17: [1400, 933],
 };
 
+// Ponto vertical (% do topo) onde o rosto fica em cada foto usada em colunas
+// "pair" — calibrado a olho por foto, já que cada enquadramento é diferente.
+const focusY: Record<number, number> = {
+  1: 20,
+  2: 38,
+  5: 18,
+  6: 30,
+  7: 32,
+  10: 22,
+  11: 22,
+  13: 18,
+  16: 32,
+  17: 35,
+  20: 34,
+  21: 46,
+};
+
 function photo(n: number): GalleryPhoto {
   const [width, height] = dims[n] ?? [933, 1400];
   return {
@@ -12,6 +29,7 @@ function photo(n: number): GalleryPhoto {
     alt: "Apresentação na edição 2026 do Usualdance Festival",
     width,
     height,
+    focusY: focusY[n],
   };
 }
 
