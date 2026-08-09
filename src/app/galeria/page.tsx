@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PhotoMarquee from "@/components/PhotoMarquee";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { GALLERY_2026_COLUMNS } from "@/lib/gallery-2026";
 import { LAST_EDITION } from "@/lib/festival-data";
 import { pageMetadata } from "@/lib/seo";
 import { EXTERNAL } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Edições anteriores",
+  title: "Galeria",
   description:
     "Fotos e vídeos de todas as edições já realizadas do Usualdance Festival, em Votuporanga/SP.",
-  path: "/edicoes-anteriores",
-  ogImage: "/images/og-edicoes-anteriores.jpg",
+  path: "/galeria",
+  ogImage: "/images/og-galeria.jpg",
 });
 
-export default function EdicoesAnterioresPage() {
+export default function GaleriaPage() {
   return (
     <>
       <section className="border-b border-white/10 bg-surface">
@@ -22,11 +23,9 @@ export default function EdicoesAnterioresPage() {
           <p className="text-xs font-bold uppercase tracking-widest text-white/70 sm:text-sm">
             Arquivo do festival
           </p>
-          <h1 className="mt-3 font-display text-3xl text-white sm:text-5xl">
-            Edições anteriores
-          </h1>
+          <h1 className="mt-3 font-display text-3xl text-white sm:text-5xl">Galeria</h1>
           <p className="mt-3 text-sm text-muted sm:text-base">
-            Reviva os melhores momentos de cada edição do Usualdance Festival.
+            Fotos e vídeos de todas as edições já realizadas do Usualdance Festival.
           </p>
         </div>
       </section>
@@ -67,6 +66,27 @@ export default function EdicoesAnterioresPage() {
             Comprar minhas fotos da edição {LAST_EDITION.year}
           </a>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
+        <h2 className="font-display text-2xl text-white sm:text-3xl">Vídeos</h2>
+        <p className="mt-3 text-sm text-muted sm:text-base">
+          As apresentações da edição {LAST_EDITION.year} em vídeo.
+        </p>
+        <div className="mt-10">
+          <YouTubeEmbed
+            videoId={`videoseries?list=${EXTERNAL.edition2026PlaylistId}`}
+            title={`Apresentações — Usualdance Festival ${LAST_EDITION.year}`}
+          />
+        </div>
+        <a
+          href={EXTERNAL.edition2026PlaylistUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-white/10"
+        >
+          Ver playlist completa no YouTube
+        </a>
       </section>
 
       <section className="border-t border-white/10 bg-surface">

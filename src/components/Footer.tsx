@@ -74,8 +74,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/edicoes-anteriores" className="transition hover:text-accent">
-                  Edições anteriores
+                <Link href="/galeria" className="transition hover:text-accent">
+                  Galeria
                 </Link>
               </li>
               <li>

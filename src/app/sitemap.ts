@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "/",
     "/ultima-edicao",
-    "/edicoes-anteriores",
+    "/galeria",
     "/politica-de-privacidade",
   ];
 

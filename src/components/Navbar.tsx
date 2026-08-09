@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: "Sobre", href: "/#sobre" },
   { label: "Local", href: "/#local" },
   { label: "Última edição", href: "/ultima-edicao" },
-  { label: "Edições anteriores", href: "/edicoes-anteriores" },
+  { label: "Galeria", href: "/galeria" },
   { label: "Cadastre-se", href: "/#captacao" },
 ];
 

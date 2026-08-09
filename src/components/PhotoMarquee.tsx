@@ -35,7 +35,7 @@ function PairTile({ photos }: { photos: [GalleryPhoto, GalleryPhoto] }) {
             alt={photo.alt}
             fill
             sizes="224px"
-            className="object-cover"
+            className="object-cover object-top"
           />
         </div>
       ))}
