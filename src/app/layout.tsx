@@ -7,9 +7,9 @@ import JsonLd from "@/components/JsonLd";
 import { eventSeriesSchema, localBusinessSchema } from "@/lib/schema";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
-// TODO: confirmar se o festival vai usar o mesmo GA4 do usualdance.com ou
-// uma propriedade própria antes de ir pra produção.
-const GA_MEASUREMENT_ID = "G-XZ2WT1P6TP";
+// Propriedade GA4 dedicada "Site Usualdance Festival" (stream "Web Fluxo
+// Festival" em festival.usualdance.com), separada do usualdance.com.
+const GA_MEASUREMENT_ID = "G-BZRLX8M8WT";
 
 const bigShoulders = Big_Shoulders({
   variable: "--font-big-shoulders",
