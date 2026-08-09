@@ -74,11 +74,12 @@ export default function HomePage() {
               Comprar minhas fotos da edição {LAST_EDITION.year}
             </a>
           </div>
-          <div className="order-1 mx-auto w-full max-w-sm sm:order-2">
+          <div className="order-1 mx-auto w-full max-w-[260px] sm:order-2 sm:max-w-xs">
             <YouTubeEmbed
               videoId={EXTERNAL.teaserVideoId}
               title="Teaser — Usualdance Festival 2026"
               aspectClassName="aspect-[9/16]"
+              mode="inline"
             />
           </div>
         </div>
@@ -110,25 +111,27 @@ export default function HomePage() {
 
       {/* IDEALIZADOR */}
       <section className="border-t border-white/10 bg-surface">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6 lg:px-8">
-          <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-lime sm:h-32 sm:w-32">
-            <Image
-              src={`/images/${FOUNDER.photo}.webp`}
-              alt={FOUNDER.name}
-              fill
-              sizes="128px"
-              className="object-cover object-top"
-            />
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-10 sm:grid-cols-2">
+            <div className="relative order-1 mx-auto aspect-square w-full max-w-md overflow-hidden rounded-2xl sm:order-2">
+              <Image
+                src={`/images/${FOUNDER.photo}.webp`}
+                alt={FOUNDER.name}
+                fill
+                sizes="(min-width: 640px) 400px, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="order-2 text-center sm:order-1 sm:text-left">
+              <p className="font-display text-xl text-white sm:text-2xl">{FOUNDER.name}</p>
+              <p className="mt-1 text-xs font-bold uppercase tracking-widest text-lime">
+                {FOUNDER.role}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
+                {FOUNDER.bio}
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="font-display text-xl text-white sm:text-2xl">{FOUNDER.name}</p>
-            <p className="mt-1 text-xs font-bold uppercase tracking-widest text-lime">
-              {FOUNDER.role}
-            </p>
-          </div>
-          <p className="max-w-xl text-sm leading-relaxed text-muted sm:text-base">
-            {FOUNDER.bio}
-          </p>
         </div>
       </section>
 

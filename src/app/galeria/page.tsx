@@ -77,6 +77,7 @@ export default function GaleriaPage() {
           <YouTubeEmbed
             videoId={`videoseries?list=${EXTERNAL.edition2026PlaylistId}`}
             title={`Apresentações — Usualdance Festival ${LAST_EDITION.year}`}
+            thumbnailVideoId={EXTERNAL.teaserVideoId}
           />
         </div>
         <a

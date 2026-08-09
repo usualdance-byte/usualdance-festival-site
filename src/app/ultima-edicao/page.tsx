@@ -33,8 +33,8 @@ export default function UltimaEdicaoPage() {
         eyebrow={`Retrospectiva ${LAST_EDITION.year}`}
         title="Confira a última edição"
         description={`Realizada em ${LAST_EDITION.date}.`}
-        image="/images/festival-foto-05.webp"
-        imageAlt="Cenas da Usualdance Festival 2026"
+        image="/images/festival-workshop-hip-hop.webp"
+        imageAlt="Workshop de Hip Hop na Usualdance Festival 2026"
       />
 
       {/* NÚMEROS */}
@@ -75,6 +75,7 @@ export default function UltimaEdicaoPage() {
           <YouTubeEmbed
             videoId={`videoseries?list=${EXTERNAL.edition2026PlaylistId}`}
             title={`Apresentações — Usualdance Festival ${LAST_EDITION.year}`}
+            thumbnailVideoId={EXTERNAL.teaserVideoId}
           />
         </div>
         <a
