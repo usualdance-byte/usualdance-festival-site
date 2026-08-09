@@ -80,7 +80,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/#captacao" className="transition hover:text-accent">
-                  Cadastre-se pra próxima edição
+                  Inscreva-se pra próxima edição
                 </Link>
               </li>
               <li>

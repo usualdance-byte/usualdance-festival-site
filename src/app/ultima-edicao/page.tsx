@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import PhotoMarquee from "@/components/PhotoMarquee";
 import StatsGrid from "@/components/StatsGrid";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
@@ -27,19 +29,13 @@ export const metadata: Metadata = pageMetadata({
 export default function UltimaEdicaoPage() {
   return (
     <>
-      <section className="border-b border-white/10 bg-surface">
-        <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-widest text-white/70 sm:text-sm">
-            Retrospectiva {LAST_EDITION.year}
-          </p>
-          <h1 className="mt-3 font-display text-3xl text-white sm:text-5xl">
-            Confira a última edição
-          </h1>
-          <p className="mt-3 text-sm text-muted sm:text-base">
-            Realizada em {LAST_EDITION.date}.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={`Retrospectiva ${LAST_EDITION.year}`}
+        title="Confira a última edição"
+        description={`Realizada em ${LAST_EDITION.date}.`}
+        image="/images/festival-foto-05.webp"
+        imageAlt="Cenas da Usualdance Festival 2026"
+      />
 
       {/* NÚMEROS */}
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -130,21 +126,35 @@ export default function UltimaEdicaoPage() {
           <h2 className="text-center font-display text-3xl text-white sm:text-4xl">Jurados</h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             {JUDGES.map((judge) => (
-              <div key={judge.name} className="rounded-2xl border border-white/10 bg-black/40 p-6">
-                <p className="font-display text-xl text-white">{judge.name}</p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-accent">
-                  {judge.role}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{judge.bio}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {judge.specialties.map((s) => (
-                    <span
-                      key={s}
-                      className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted"
-                    >
-                      {s}
-                    </span>
-                  ))}
+              <div
+                key={judge.name}
+                className="flex gap-4 rounded-2xl border border-white/10 bg-black/40 p-6"
+              >
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-lime/40 sm:h-20 sm:w-20">
+                  <Image
+                    src={`/images/${judge.photo}.jpg`}
+                    alt={judge.name}
+                    fill
+                    sizes="80px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <p className="font-display text-xl text-white">{judge.name}</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-accent">
+                    {judge.role}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{judge.bio}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {judge.specialties.map((s) => (
+                      <span
+                        key={s}
+                        className="rounded-full border border-white/10 px-3 py-1 text-xs text-muted"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

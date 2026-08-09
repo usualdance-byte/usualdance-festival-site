@@ -11,15 +11,15 @@ import { ABOUT_TEXT, FAQ_ITEMS, FOUNDER, LAST_EDITION } from "@/lib/festival-dat
 import {
   EXTERNAL,
   GOOGLE_MAPS_EMBED_URL,
-  GOOGLE_MAPS_URL,
+  SITE_SLOGAN,
   VENUE,
   WHATSAPP_GERAL,
 } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Usualdance Festival — Próxima edição em breve",
+  title: "Usualdance Festival — Nos vemos em 2027",
   description:
-    "Cadastre-se para saber em primeira mão quando abrem as inscrições da próxima edição do Usualdance Festival, em Votuporanga/SP.",
+    "Inscreva-se para saber em primeira mão quando abrem as inscrições da próxima edição do Usualdance Festival, em Votuporanga/SP.",
   path: "/",
 });
 
@@ -28,7 +28,7 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <PageHero
-        eyebrow="Próxima edição em breve"
+        eyebrow="Nos vemos em 2027"
         title={
           <>
             Usualdance
@@ -36,7 +36,7 @@ export default function HomePage() {
             Festival
           </>
         }
-        description={ABOUT_TEXT}
+        description={SITE_SLOGAN}
         image="/images/festival-foto-09.webp"
         imageAlt="Apresentação na Usualdance Festival 2026"
       >
@@ -65,6 +65,14 @@ export default function HomePage() {
               Um gostinho do que rolou na edição {LAST_EDITION.year} — pra você já ir se
               imaginando na próxima.
             </p>
+            <a
+              href={EXTERNAL.fotop}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-lime px-7 py-3 text-sm font-bold uppercase tracking-wide text-black transition hover:brightness-95"
+            >
+              Comprar minhas fotos da edição {LAST_EDITION.year}
+            </a>
           </div>
           <div className="order-1 mx-auto w-full max-w-sm sm:order-2">
             <YouTubeEmbed
@@ -141,14 +149,6 @@ export default function HomePage() {
               className="h-80 w-full sm:h-96"
             />
           </div>
-          <a
-            href={GOOGLE_MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block text-sm font-semibold text-accent transition hover:text-white"
-          >
-            Abrir no Google Maps →
-          </a>
         </div>
       </section>
 

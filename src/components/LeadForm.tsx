@@ -37,7 +37,7 @@ export default function LeadForm({ id }: { id?: string }) {
 
       if (!res.ok) {
         const data = await res.json().catch(() => null);
-        throw new Error(data?.error ?? "Não foi possível enviar seu cadastro.");
+        throw new Error(data?.error ?? "Não foi possível enviar sua inscrição.");
       }
 
       setStatus("success");
@@ -55,7 +55,7 @@ export default function LeadForm({ id }: { id?: string }) {
         id={id}
         className="rounded-2xl border border-lime/30 bg-surface px-6 py-10 text-center"
       >
-        <p className="font-display text-2xl text-lime">Cadastro recebido!</p>
+        <p className="font-display text-2xl text-lime">Inscrição recebida!</p>
         <p className="mt-2 text-sm text-muted sm:text-base">
           Você vai ser avisado(a) em primeira mão assim que a próxima edição do
           Usualdance Festival for anunciada.

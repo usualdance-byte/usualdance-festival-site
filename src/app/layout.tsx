@@ -26,7 +26,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Próxima edição em breve`,
+    default: `${SITE_NAME} — Nos vemos em 2027`,
     template: `%s | ${SITE_NAME}`,
   },
 };

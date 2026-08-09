@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: "Local", href: "/#local" },
   { label: "Última edição", href: "/ultima-edicao" },
   { label: "Galeria", href: "/galeria" },
-  { label: "Cadastre-se", href: "/#captacao" },
+  { label: "Inscreva-se", href: "/#captacao" },
 ];
 
 export default function Navbar() {

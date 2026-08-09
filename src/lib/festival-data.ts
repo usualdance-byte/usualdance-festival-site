@@ -52,12 +52,14 @@ export const JUDGES = [
   {
     name: "Daniela Morais",
     role: "Jurada",
+    photo: "jurado-daniela-morais",
     bio: "Bailarina, professora e coreógrafa, atua na formação de crianças e adolescentes há mais de uma década.",
     specialties: ["Dança Clássica", "Estilo Livre", "Jazz/Contemporâneo"],
   },
   {
     name: "Jonathan Lupe",
     role: "Jurado · Professor",
+    photo: "jurado-jonathan-lupe",
     bio: "Bailarino, coreógrafo, diretor e produtor artístico. Com 25 anos de experiência, construiu uma carreira marcada pela versatilidade.",
     specialties: [
       "Dança Clássica",
@@ -69,12 +71,14 @@ export const JUDGES = [
   {
     name: "Sarah Tinel",
     role: "Jurada",
+    photo: "jurado-sarah-tinel",
     bio: "Especialista em K-Pop e danças urbanas, fundou o evento KFV em Votuporanga. Diretora cênica com curso superior em Dança.",
     specialties: ["Danças Urbanas", "K-Pop", "Dança Clássica"],
   },
   {
     name: "Victor Big",
     role: "Jurado · Professor",
+    photo: "jurado-victor-big",
     bio: "Dançarino, coreógrafo e pesquisador em Danças Urbanas. Artista atuante na cultura Hip Hop, com trajetória na criação artística autoral e educação.",
     specialties: ["Estilo Livre", "Danças Urbanas", "K-Pop", "Hip Hop"],
   },
@@ -113,7 +117,7 @@ export const FAQ_ITEMS = [
   {
     question: "Quando será a próxima edição do Usualdance Festival?",
     answer:
-      "Ainda estamos definindo a data da próxima edição. Cadastre seu nome, e-mail e WhatsApp aqui no site para ser avisado em primeira mão assim que abrirmos as inscrições.",
+      "Ainda estamos definindo a data da próxima edição. Deixe seu nome, e-mail e WhatsApp aqui no site para ser avisado em primeira mão assim que abrirmos as inscrições.",
     linkText: "aqui no site",
     linkHref: "#captacao",
   },

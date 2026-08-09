@@ -61,7 +61,7 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("Erro ao gravar lead no banco:", err);
     return NextResponse.json(
-      { error: "Não foi possível salvar seu cadastro. Tente novamente." },
+      { error: "Não foi possível salvar sua inscrição. Tente novamente." },
       { status: 500 }
     );
   }
