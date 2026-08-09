@@ -104,10 +104,9 @@ export const AWARD_HIGHLIGHTS = [
 ];
 
 export const EDITION_STATS = [
-  { value: "133", label: "Bailarinos" },
+  { value: "+130", label: "Bailarinos" },
   { value: "+140 mil", label: "Pessoas alcançadas" },
   { value: "R$ 2.100", label: "Em prêmios" },
-  { value: "5", label: "Modalidades" },
 ];
 
 export const FAQ_ITEMS = [
