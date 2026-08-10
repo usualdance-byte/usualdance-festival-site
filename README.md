@@ -19,7 +19,7 @@ Sem `DATABASE_URL` configurada, o site abre normalmente — só o envio do formu
 ## Estrutura
 
 - `/` — home: hero, formulário de captação, sobre, local, FAQ.
-- `/ultima-edicao` — retrospectiva da edição 2026: estilos, categorias, jurados, premiação, galeria (placeholder até as fotos/vídeos chegarem).
+- `/ultima-edicao` — retrospectiva da edição 2026: estilos, categorias, jurados (com foto), premiação, galeria de fotos/vídeos.
 - `src/app/api/leads/route.ts` — recebe o POST do formulário, grava na tabela `festival_leads` (Postgres/Neon via addon da Vercel) e, em seguida, sincroniza (best-effort) com o Google Sheets via `GOOGLE_SHEETS_WEBHOOK_URL`.
 
 ## Checklist de setup (fora do código — precisa ser feito manualmente)
@@ -30,7 +30,7 @@ Sem `DATABASE_URL` configurada, o site abre normalmente — só o envio do formu
 
 ## Pendências de conteúdo
 
-- **Fotos/vídeos da edição 2026** para a galeria em `/ultima-edicao` — usar `PhotoMarquee`/`VideoCarousel` (já no repo, em `src/components/`) assim que o material chegar.
 - **Logo do festival** — hoje o header/footer usam só texto ("USUALDANCE FESTIVAL"); trocar por `<Image>` se houver um logo próprio.
 - **Telefone/WhatsApp e redes sociais** — assumi os mesmos do `usualdance.com` institucional (`src/lib/site.ts`); confirmar se o festival tem contato/redes próprios.
-- **GA4** — está usando a mesma propriedade do site institucional (`G-XZ2WT1P6TP` em `src/app/layout.tsx`); avaliar se vale criar uma propriedade própria pro festival.
+
+Resolvido: GA4 já usa propriedade própria (`G-BZRLX8M8WT`); `www.festival.usualdance.com` já redireciona pro domínio sem `www`; fotos da galeria e dos jurados já estão no ar.
