@@ -33,8 +33,8 @@ export default function UltimaEdicaoPage() {
         eyebrow={`Retrospectiva ${LAST_EDITION.year}`}
         title="Confira a última edição"
         description={`Realizada em ${LAST_EDITION.date}.`}
-        image="/images/festival-workshop-hip-hop.webp"
-        imageAlt="Workshop de Hip Hop na Usualdance Festival 2026"
+        image="/images/festival-hero-ultima-edicao.webp"
+        imageAlt="Grupo em pé no palco da Usualdance Festival 2026"
       />
 
       {/* NÚMEROS */}
