@@ -3,10 +3,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
 import Faq from "@/components/Faq";
+import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { pageMetadata } from "@/lib/seo";
+import { faqSchema } from "@/lib/schema";
 import { ABOUT_TEXT, FAQ_ITEMS, FOUNDER, LAST_EDITION } from "@/lib/festival-data";
 import {
   EXTERNAL,
@@ -161,6 +163,7 @@ export default function HomePage() {
           Perguntas frequentes
         </h2>
         <div className="mt-8">
+          <JsonLd data={faqSchema(FAQ_ITEMS)} />
           <Faq items={FAQ_ITEMS} />
         </div>
       </section>

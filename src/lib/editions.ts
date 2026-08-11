@@ -16,11 +16,21 @@ export const LEGACY_EDITIONS: LegacyEdition[] = [
     playlistUrl: "https://youtube.com/playlist?list=PLHn86WhA7iE4",
     photos: [
       { type: "single", photo: { file: "editions/gravidade-2022-01", alt: "Premiação da mostra competitiva no Gravidade Festival 2022", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2022-02", alt: "Apresentação solo de dança contemporânea no Gravidade Festival 2022", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2022-04", alt: "Apresentação solo de dança contemporânea no Gravidade Festival 2022", width: 1400, height: 933 } },
+      {
+        type: "pair",
+        photos: [
+          { file: "editions/gravidade-2022-02", alt: "Apresentação solo de dança contemporânea no Gravidade Festival 2022", width: 1400, height: 933, focusY: 25 },
+          { file: "editions/gravidade-2022-04", alt: "Apresentação solo de dança contemporânea no Gravidade Festival 2022", width: 1400, height: 933, focusY: 45 },
+        ],
+      },
       { type: "single", photo: { file: "editions/gravidade-2022-06", alt: "Workshop de ballet do Gravidade Festival 2022", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2022-03", alt: "Plateia do Gravidade Festival 2022", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2022-05", alt: "Bastidores da premiação do Gravidade Festival 2022", width: 1400, height: 933 } },
+      {
+        type: "pair",
+        photos: [
+          { file: "editions/gravidade-2022-03", alt: "Plateia do Gravidade Festival 2022", width: 1400, height: 933, focusY: 30 },
+          { file: "editions/gravidade-2022-05", alt: "Bastidores da premiação do Gravidade Festival 2022", width: 1400, height: 933, focusY: 25 },
+        ],
+      },
     ],
   },
   {
@@ -29,8 +39,13 @@ export const LEGACY_EDITIONS: LegacyEdition[] = [
     playlistUrl: "https://youtube.com/playlist?list=PLFAN-y2a-24E",
     photos: [
       { type: "single", photo: { file: "editions/gravidade-2019-01", alt: "Apresentação de dança no Gravidade Festival 2019", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2019-02", alt: "Apresentação de dança contemporânea no Gravidade Festival 2019", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2019-03", alt: "Workshop de danças urbanas no Gravidade Festival 2019", width: 1400, height: 933 } },
+      {
+        type: "pair",
+        photos: [
+          { file: "editions/gravidade-2019-02", alt: "Apresentação de dança contemporânea no Gravidade Festival 2019", width: 1400, height: 933, focusY: 55 },
+          { file: "editions/gravidade-2019-03", alt: "Workshop de danças urbanas no Gravidade Festival 2019", width: 1400, height: 933, focusY: 30 },
+        ],
+      },
       { type: "single", photo: { file: "editions/gravidade-2019-04", alt: "Equipe e participantes do Gravidade Festival 2019", width: 1400, height: 933 } },
     ],
   },
@@ -41,10 +56,20 @@ export const LEGACY_EDITIONS: LegacyEdition[] = [
     photos: [
       { type: "single", photo: { file: "editions/gravidade-2018-01", alt: "Apresentação de dança contemporânea no Gravidade Festival 2018", width: 1400, height: 933 } },
       { type: "single", photo: { file: "editions/gravidade-2018-03", alt: "Apresentação de ballet clássico no Gravidade Festival 2018", width: 933, height: 1400 } },
-      { type: "single", photo: { file: "editions/gravidade-2018-02", alt: "Apresentação de danças urbanas no Gravidade Festival 2018", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2018-04", alt: "Apresentação de jazz no Gravidade Festival 2018", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2018-05", alt: "Bailarino do Gravidade Festival 2018 em Votuporanga", width: 1400, height: 933 } },
-      { type: "single", photo: { file: "editions/gravidade-2018-06", alt: "Bailarinas na arquibancada do Gravidade Festival 2018", width: 1400, height: 933 } },
+      {
+        type: "pair",
+        photos: [
+          { file: "editions/gravidade-2018-02", alt: "Apresentação de danças urbanas no Gravidade Festival 2018", width: 1400, height: 933, focusY: 35 },
+          { file: "editions/gravidade-2018-04", alt: "Apresentação de jazz no Gravidade Festival 2018", width: 1400, height: 933, focusY: 60 },
+        ],
+      },
+      {
+        type: "pair",
+        photos: [
+          { file: "editions/gravidade-2018-05", alt: "Bailarino do Gravidade Festival 2018 em Votuporanga", width: 1400, height: 933, focusY: 20 },
+          { file: "editions/gravidade-2018-06", alt: "Bailarinas na arquibancada do Gravidade Festival 2018", width: 1400, height: 933, focusY: 35 },
+        ],
+      },
     ],
   },
 ];

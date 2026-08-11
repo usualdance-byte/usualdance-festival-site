@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import JsonLd from "./JsonLd";
-import { faqSchema } from "@/lib/schema";
 
 export interface FaqItem {
   question: string;
@@ -32,7 +30,6 @@ export default function Faq({ items }: { items: FaqItem[] }) {
 
   return (
     <div className="divide-y divide-white/10 border-y border-white/10">
-      <JsonLd data={faqSchema(items)} />
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
