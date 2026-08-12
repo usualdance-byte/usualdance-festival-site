@@ -22,11 +22,37 @@ const focusY: Record<number, number> = {
   21: 46,
 };
 
+// Alt text descritivo por foto (accessibility + SEO de imagem) — cada uma
+// descreve o que de fato aparece na cena, em vez de um texto genérico repetido.
+const alts: Record<number, string> = {
+  1: "Bailarinos ensaiando coreografia de dança urbana em espaço coberto na Usualdance Festival 2026",
+  2: "Grupo em oficina de dança urbana com os braços erguidos na Usualdance Festival 2026",
+  3: "Bailarinos em oficina de hip hop com professor de boné vermelho na Usualdance Festival 2026",
+  4: "Grupo em passo sincronizado durante oficina de dança urbana na Usualdance Festival 2026",
+  5: "Bailarina em movimento de chute durante oficina de dança urbana na Usualdance Festival 2026",
+  6: "Bailarinas de ballet em pontas no palco da Usualdance Festival 2026",
+  7: "Grupo de dança folclórica com saias floridas no palco da Usualdance Festival 2026",
+  8: "Bailarina solo de dança contemporânea com sobretudo azul no palco da Usualdance Festival 2026",
+  9: "Bailarino solo em efeito de fumaça no palco da Usualdance Festival 2026",
+  10: "Bailarina solo de dança urbana em pose de força no palco da Usualdance Festival 2026",
+  11: "Bailarina solo com figurino branco no palco da Usualdance Festival 2026",
+  12: "Bailarina solo de dança urbana com moletom neon no palco da Usualdance Festival 2026",
+  13: "Bailarina solo com figurino gótico e coturno no palco da Usualdance Festival 2026",
+  14: "Trio de dança com lenços coloridos no palco da Usualdance Festival 2026",
+  15: "Dupla de dança de salão em pose dramática no palco da Usualdance Festival 2026",
+  16: "Grupo de dança contemporânea em pirâmide corporal no palco da Usualdance Festival 2026",
+  17: "Equipe organizadora da Usualdance Festival 2026 posando no palco ao lado da tela de voto popular",
+  18: "Grupo em coreografia de teatro musical no palco da Usualdance Festival 2026",
+  19: "Grupo de bailarinas em pose coletiva no palco da Usualdance Festival 2026",
+  20: "Trio de ballet clássico em cena de grupo no palco da Usualdance Festival 2026",
+  21: "Dupla de dança circense com fita elástica no palco da Usualdance Festival 2026",
+};
+
 function photo(n: number): GalleryPhoto {
   const [width, height] = dims[n] ?? [933, 1400];
   return {
     file: `festival-foto-${String(n).padStart(2, "0")}`,
-    alt: "Apresentação na edição 2026 do Usualdance Festival",
+    alt: alts[n],
     width,
     height,
     focusY: focusY[n],

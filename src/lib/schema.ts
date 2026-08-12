@@ -1,4 +1,6 @@
-import { EMAIL, SITE_NAME, SITE_URL, VENUE } from "./site";
+import { EMAIL, SITE_NAME, SITE_URL, SOCIAL, VENUE } from "./site";
+
+const SOCIAL_PROFILES = [SOCIAL.instagram, SOCIAL.tiktok, SOCIAL.youtube];
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -7,6 +9,7 @@ export const localBusinessSchema = {
   name: SITE_NAME,
   url: SITE_URL,
   email: EMAIL,
+  sameAs: SOCIAL_PROFILES,
   address: {
     "@type": "PostalAddress",
     streetAddress: VENUE.street,
@@ -33,6 +36,7 @@ export const eventSeriesSchema = {
     name: "Usualdance",
     url: "https://usualdance.com",
     email: EMAIL,
+    sameAs: SOCIAL_PROFILES,
   },
   location: {
     "@type": "Place",

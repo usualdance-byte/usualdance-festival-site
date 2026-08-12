@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PhotoMarquee from "@/components/PhotoMarquee";
 import { LAST_EDITION } from "@/lib/festival-data";
@@ -32,7 +33,17 @@ export default function GaleriaPage() {
       {/* EDIÇÃO MAIS RECENTE */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-lime/30 bg-surface p-6 sm:p-8">
+          <div className="grid gap-6 rounded-2xl border border-lime/30 bg-surface p-6 sm:grid-cols-[minmax(0,280px)_1fr] sm:items-center sm:p-8">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl sm:aspect-square">
+              <Image
+                src="/images/festival-foto-06.webp"
+                alt="Bailarinas de ballet em pontas no palco da Usualdance Festival 2026"
+                fill
+                sizes="(min-width: 640px) 280px, 100vw"
+                className="object-cover"
+                style={{ objectPosition: "50% 25%" }}
+              />
+            </div>
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="text-xs font-bold uppercase tracking-widest text-lime">
@@ -93,7 +104,7 @@ export default function GaleriaPage() {
                   Ver vídeos no YouTube
                 </a>
               </div>
-              <div className="mt-6">
+              <div className="relative left-1/2 mt-6 w-screen -translate-x-1/2">
                 <PhotoMarquee columns={edition.photos} />
               </div>
             </div>
